@@ -13,6 +13,9 @@ It has been heavily refactored, breaking backward compatibility with original ex
 * Classes have been renamed to avoid amibuity
 * `EAjaxUploadWidget` reflects Fineuploader's new API and options
 * `qqFileUploadhandler` has been refactored to avoid initialization of optional parameters in the constructor and documented (phpdoc)
+* `EAjaxUploadHandlerAction` has been renamed and adapted to meet the new API
+* Code has been re-formatted
+* Initial README was in Russian and has been renamed to README.ru in favor of this english version.
 
 
 Note: After this fork gets the required testing, a pull request will be made to the original author.
