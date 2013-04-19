@@ -59,7 +59,7 @@ class EAjaxUploadWidget extends CWidget
 		if (!empty($config['request']['params'])) {
 			$config['request']['params'] = array_merge($postParams, $config['request']['params']);
 		} else {
-			$config['request']['params'] = $config['request']['params'];
+			$config['request']['params'] = $postParams;
 		}
 
 		// Set the name of the js variable
