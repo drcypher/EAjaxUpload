@@ -8,7 +8,7 @@
  * @version 0.1
  * @license http://www.opensource.org/licenses/bsd-license.php
  */
-class EAjaxUpload extends CWidget
+class EAjaxUploadWidget extends CWidget
 {
 	/**
 	 * HTML Element id.
@@ -38,15 +38,8 @@ class EAjaxUpload extends CWidget
 	public function run()
 	{
 		if (empty($this->config['request']['endpoint'])) {
-			throw new CException('EAjaxUpload: param "action" cannot be empty.');
-		}
-
-		if (empty($this->config['validation']['allowedExtensions'])) {
-			throw new CException('EAjaxUpload: param "allowedExtensions" cannot be empty.');
-		}
-
-		if (empty($this->config['validation']['sizeLimit'])) {
-			throw new CException('EAjaxUpload: param "sizeLimit" cannot be empty.');
+			// Require presence of request endpoint which will handle the server side.
+			throw new CException('EAjaxUpload: param "request/endpoint" cannot be empty.');
 		}
 
 		// Register js and css file

@@ -9,23 +9,23 @@
  * @version 0.1
  * @license http://www.opensource.org/licenses/bsd-license.php
  */
-class EAjaxUploadAction extends CAction
+class EAjaxUploadHandlerAction extends CAction
 {
 	public function run()
 	{
-		Yii::import("ext.EAjaxUpload.qqFileUploader");
+		Yii::import("ext.EAjaxUpload.qqFileUploadHandler");
 
 		// list of valid extensions, ex. array("jpeg", "xml", "bmp")
 		$allowedExtensions = array("jpg");
 		// max file size in bytes
 		$sizeLimit = 1 * 1024 * 1024;
 
-		$uploader = new qqFileUploader();
+		$uploadHandler = new qqFileUploadHandler();
 
-		$uploader->setAllowedExtensions($allowedExtensions);
-		$uploader->setSizeLimit($sizeLimit);
+		$uploadHandler->setAllowedExtensions($allowedExtensions);
+		$uploadHandler->setSizeLimit($sizeLimit);
 
-		$result = $uploader->handleUpload('upload/');
+		$result = $uploadHandler->handleUpload('upload/');
 
 		// to pass data through iframe you will need to encode all html tags
 		echo htmlspecialchars(json_encode($result), ENT_NOQUOTES);

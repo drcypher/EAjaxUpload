@@ -12,7 +12,7 @@
  * @author Filios Konstantinos <konfilios@gmail.com>
  * @author Vladimir Papaev <kosenka@gmail.com>
  */
-class qqFileUploader
+class qqFileUploadHandler
 {
 	/**
 	 * Allowed file extensions.
