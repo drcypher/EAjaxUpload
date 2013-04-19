@@ -1,5 +1,5 @@
-BogoYiiJsonService
-==================
+EAjaxUpload for fiNeUploader
+============================
 
 [Fineuploader](https://github.com/Widen/fine-uploader) (ajax uploader) integration with Yii Framework.
 
